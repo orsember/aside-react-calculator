@@ -18,6 +18,7 @@ module.exports = {
   resolve: {
     modules: ["node_modules", "src"],
     extensions: [".jsx", ".js"]
+    // needed to add this to be able to resolve imports with no extentions specified
   },
   module: {
     rules: [
@@ -29,8 +30,6 @@ module.exports = {
         // the loader is just a shortcut for use: [first]
         // the babel loader will compile the js and the jsx to vanilla, for which the
         // .babelrc holds the necessary plugins
-
-        // needed to add this to be able to resolve imports with no extentions specified
       },
       {
         test: /\.s?css$/,
@@ -43,12 +42,14 @@ module.exports = {
       },
       {
         test: /.html$/,
-        use: [{
-          loader: 'html-loader',
-          options: {
-            minimize: true
+        use: [
+          {
+            loader: "html-loader",
+            options: {
+              minimize: true
+            }
           }
-        }]
+        ]
       }
     ]
   }
