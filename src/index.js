@@ -2,10 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Component
-import App from  'components/app';
-
-// Styles
-import './styles/root.scss'
+import App from 'components/app';
 
 const container = document.getElementById('app-container');
 

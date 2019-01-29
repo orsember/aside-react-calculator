@@ -1,0 +1,7 @@
+{
+  "hooks": {
+    "pre-commit": [
+      "pretty-quick --staged --verbose --bail &&  npm run lint"
+      ]
+  }
+}

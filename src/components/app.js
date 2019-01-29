@@ -1,8 +1,10 @@
-import React, { Component } from "react";
+import React from 'react';
+// Style
+import './style.scss';
 
 const App = () => {
   return (
-    <div className="app--container">
+    <div className="app__container">
       <h3>Multipass</h3>
     </div>
   );
