@@ -1,0 +1,25 @@
+@import '~styles/rescources.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.app__container {
+  @include gradient(#000428, #004e92);
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+.calculator__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
