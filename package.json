@@ -11,6 +11,14 @@
     "build": "webpack --mode production",
     "lint": "eslint . --color --ext .jsx --ext .js"
   },
+  "precommit": "NODE_ENV=production lint-staged",
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "pretty-quick --staged",
+      "eslint src/ --fix",
+      "git add"
+    ]
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
