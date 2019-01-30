@@ -3,14 +3,15 @@ import React from 'react';
 import './style.scss';
 // Component
 import Header from '../header';
-import NumPad from '../calculator/numpad';
+import NumberBlock from '../blocks/NumberBlock';
+// import OperatorBlock from '../blocks/Operators';
 
 const App = () => {
   return (
     <div className="app__container">
       <Header />
       <div className="calculator__body">
-        <NumPad />
+        <NumberBlock />
       </div>
     </div>
   );

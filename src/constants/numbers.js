@@ -1,23 +1,15 @@
 const numbers = [
   {
     id: Math.random(),
-    value: '.'
+    value: 7
   },
   {
     id: Math.random(),
-    value: 0
+    value: 8
   },
   {
     id: Math.random(),
-    value: 1
-  },
-  {
-    id: Math.random(),
-    value: 2
-  },
-  {
-    id: Math.random(),
-    value: 3
+    value: 9
   },
   {
     id: Math.random(),
@@ -33,15 +25,15 @@ const numbers = [
   },
   {
     id: Math.random(),
-    value: 7
+    value: 1
   },
   {
     id: Math.random(),
-    value: 8
+    value: 2
   },
   {
     id: Math.random(),
-    value: 9
+    value: 3
   }
 ];
 
