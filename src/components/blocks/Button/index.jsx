@@ -4,13 +4,14 @@ import './style.scss';
 
 const Button = ({ displayValue, double }) => {
   return (
-    <div
+    <button
+      type="button"
       className={`button button--square ${
         double ? 'button--double' : ''
       }`}
-    >
-      {displayValue}
-    </div>
+      // eslint-disable-next-line
+      dangerouslySetInnerHTML={{ __html: displayValue }}
+    />
   );
 };
 

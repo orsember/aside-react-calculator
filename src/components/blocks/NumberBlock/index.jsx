@@ -8,7 +8,7 @@ import './style.scss';
 
 const NumberBlock = () => {
   return (
-    <div className="numberblock numberblock__container">
+    <div className="number-block">
       {numbers.map(number => (
         <Fragment key={number.id}>
           <Button displayValue={number.value} />

@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
-
+  outline: none;
   border-radius: 2px;
   border: 2px solid var(--orange-deep);
   color: var(--orange);
@@ -29,9 +29,9 @@
   &--square {
     height: 50px;
     width: 50px;
-    margin: 5px;
+    margin: 2px;
   }
   &--double {
-    width: 110px;
+    width: 104px;
   }
 }

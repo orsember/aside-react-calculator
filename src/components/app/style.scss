@@ -16,10 +16,19 @@ body,
   height: 100%;
   width: 100%;
   overflow: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .calculator__body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
