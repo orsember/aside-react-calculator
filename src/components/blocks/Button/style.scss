@@ -1,0 +1,37 @@
+@import '~styles/rescources.scss';
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  outline: none;
+  border-radius: 2px;
+  border: 2px solid var(--orange-deep);
+  color: var(--orange);
+  background: rgba(119, 136, 153, 0.2);
+  transition: height, background-color 0.3s;
+
+  &:hover {
+    background: rgba(119, 136, 153, 0.4);
+    cursor: pointer;
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+
+  &::selection {
+    background: transparent;
+  }
+
+  &--square {
+    height: 50px;
+    width: 50px;
+    margin: 2px;
+  }
+  &--double {
+    width: 104px;
+  }
+}

@@ -1,0 +1,17 @@
+// Gradient backgrounds
+// for more information:
+// https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient
+// https://digitalsynopsis.com/design/beautiful-color-ui-gradients-backgrounds/
+// https://uigradients.com/
+
+@mixin gradient($color1, $color2) {
+  background: linear-gradient(45deg, $color1, $color2);
+}
+
+@mixin gradient-SoundCloud {
+  background: linear-gradient(
+    to right,
+    rgb(254, 140, 0),
+    rgb(248, 54, 0)
+  );
+}
