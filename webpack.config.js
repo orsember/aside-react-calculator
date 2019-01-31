@@ -26,8 +26,15 @@ module.exports = {
         test: /\.jsx?$/,
         // see files with extentions and pass them to the specified loader
         exclude: [path.resolve(__dirname, 'node_modules')],
-        loader: 'babel-loader'
-        // the loader is just a shortcut for use: [first]
+        // migrated babel settings here, and added proposal plugin
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+            plugins: ['@babel/plugin-proposal-class-properties']
+          }
+        }
+        // the "loader" is just a shortcut for use: [first]
         // the babel loader will compile the js and the jsx to vanilla, for which the
         // .babelrc holds the necessary plugins
       },
@@ -40,6 +47,8 @@ module.exports = {
         ]
         // style-loader must come first in the array, and the css must be imported into the entrypoint
       },
+      // loads static html files from project
+      // note that the template html is not loaded by this
       {
         test: /.html$/,
         use: [

@@ -8,6 +8,7 @@
         "extensions": [".js", ".jsx"]
       }
     ],
+    "react/prefer-stateless-function": 0,
     "prettier/prettier": "error",
     "import/no-extraneous-dependencies": ["error", { "packageDir": "." }],
     "react/prop-types": 0,

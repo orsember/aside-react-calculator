@@ -6,12 +6,15 @@ import Button from '../Button';
 // Style
 import './style.scss';
 
-const NumberBlock = () => {
+const NumberBlock = ({ onNumberHit }) => {
   return (
     <div className="number-block">
       {numbers.map(number => (
         <Fragment key={number.id}>
-          <Button displayValue={number.value} />
+          <Button
+            displayValue={number.value}
+            onchange={onNumberHit}
+          />
         </Fragment>
       ))}
       <Button displayValue="0" double />
