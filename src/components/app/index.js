@@ -12,13 +12,38 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      value: '0'
+      value: []
     };
   }
 
-  onNumberHit = () => {
+  onNumberHit = data => () => {
     //eslint-disable-next-line
-    console.log('numberhit');
+    console.log('number hit ==== ', data);
+    this.setState(prevState => ({
+      value: [...prevState.value, data.toString()]
+    }));
+  };
+
+  onOperatorHit = data => () => {
+    //eslint-disable-next-line
+    console.log('operator hit', data);
+    this.setState(prevState => ({
+      value: [...prevState.value, data.toString()]
+    }));
+  };
+
+  onModifierHit = data => () => {
+    //eslint-disable-next-line
+    console.log('modifier hit', data);
+    this.setState(prevState => ({
+      value: [...prevState.value, data.toString()]
+    }));
+  };
+
+  onEvaluate = () => {
+    const { value } = this.state;
+    const result = eval(value);
+    console.log('=== it all equals === ', result);
   };
 
   render() {
@@ -32,10 +57,13 @@ class App extends Component {
           </div>
           <div className="row">
             <NumberBlock onChange={this.onNumberHit} />
-            <OperatorBlock />
+            <OperatorBlock onChange={this.onOperatorHit} />
           </div>
           <div className="row">
-            <ModifiersBlock />
+            <ModifiersBlock
+              onChange={this.onModifierHit}
+              onEvaluate={this.onEvaluate}
+            />
           </div>
         </div>
       </div>
